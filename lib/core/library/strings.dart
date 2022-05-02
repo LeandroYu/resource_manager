@@ -8,3 +8,6 @@ const String updateButton = "Atualizar";
 
 // botomNavigationBar
 const String bottomNavigatorHome = "Home";
+const String bottomNavigatorConfig = "Config";
+const String bottomNavigatorShopping = "Mercado";
+const String bottomNavigatorWallet = "carteira";

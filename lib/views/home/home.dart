@@ -54,16 +54,16 @@ class _HomeState extends State<Home> {
             label: strings.bottomNavigatorHome,
           ),
           BottomNavigationButton(
-            icon: FontAwesomeIcons.house,
-            label: strings.bottomNavigatorHome,
+            icon: FontAwesomeIcons.wallet,
+            label: strings.bottomNavigatorWallet,
           ),
           BottomNavigationButton(
-            icon: FontAwesomeIcons.house,
-            label: strings.bottomNavigatorHome,
+            icon: FontAwesomeIcons.cartShopping,
+            label: strings.bottomNavigatorShopping,
           ),
           BottomNavigationButton(
-            icon: FontAwesomeIcons.house,
-            label: strings.bottomNavigatorHome,
+            icon: FontAwesomeIcons.gears,
+            label: strings.bottomNavigatorConfig,
           ),
         ],
       ),
