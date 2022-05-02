@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:resource_manager/views/home/widgets/bottom_navigation_button.dart';
+import 'package:resource_manager/views/market/market_view.dart';
 
 import '../../core/library/strings.dart' as strings;
 import '../../core/utils/media_query.dart' as ui;
@@ -14,7 +15,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeState extends State<HomeView> {
   int _currentIndex = 0;
-  List<Widget> pages = const [HomeView(), HomeView(), HomeView(), HomeView()];
+  List<Widget> pages = const [HomeView(), HomeView(), MarketView(), HomeView()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
