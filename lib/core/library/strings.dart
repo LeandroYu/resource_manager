@@ -11,3 +11,6 @@ const String bottomNavigatorHome = "Home";
 const String bottomNavigatorConfig = "Config";
 const String bottomNavigatorShopping = "Mercado";
 const String bottomNavigatorWallet = "carteira";
+
+// home_view
+const String homeViewTitle = "Bem Vindo ";
