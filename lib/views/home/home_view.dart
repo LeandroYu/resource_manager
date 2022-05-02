@@ -5,16 +5,16 @@ import 'package:resource_manager/views/home/widgets/bottom_navigation_button.dar
 import '../../core/library/strings.dart' as strings;
 import '../../core/utils/media_query.dart' as ui;
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class HomeView extends StatefulWidget {
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<HomeView> {
   int _currentIndex = 0;
-  List<Widget> pages = const [Home(), Home(), Home(), Home()];
+  List<Widget> pages = const [HomeView(), HomeView(), HomeView(), HomeView()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
