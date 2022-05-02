@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../core/library/strings.dart' as strings;
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -11,10 +13,16 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
-      ),
-      body: Container(),
+      body: _body(context),
     );
   }
+}
+
+Widget _body(BuildContext context) {
+  return SafeArea(
+      child: SingleChildScrollView(
+    child: Column(
+      children: [],
+    ),
+  ));
 }
