@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.resource_manager">
+    package="com.unilost.resource_manager">
    <application
         android:label="resource_manager"
         android:name="${applicationName}"

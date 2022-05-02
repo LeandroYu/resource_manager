@@ -1,4 +1,4 @@
-package com.example.resource_manager
+package com.unilost.resource_manager
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "655674632888",
+    "project_id": "resource-manager-c80fd",
+    "storage_bucket": "resource-manager-c80fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655674632888:android:b36a687f0c53e375ba224d",
+        "android_client_info": {
+          "package_name": "com.unilost.resource_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655674632888-kgsfqonkkih9ho5003v4fagdc4nfoi6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unilost.resource_manager",
+            "certificate_hash": "39c0fc40afd77e29fcc4ff4170cf962abd900d65"
+          }
+        },
+        {
+          "client_id": "655674632888-svacjj6r9fpso4b1k6g8r9n38ubk674k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm-RIjChwhNvYgTRn7OSGJeZdHAqMI3dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655674632888-svacjj6r9fpso4b1k6g8r9n38ubk674k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
