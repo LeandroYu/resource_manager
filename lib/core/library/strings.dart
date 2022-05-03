@@ -14,3 +14,6 @@ const String bottomNavigatorWallet = "carteira";
 
 // home_view
 const String homeViewTitle = "Bem Vindo ";
+
+// market_view
+const String marketViewTitle = "Lista de Compras";
