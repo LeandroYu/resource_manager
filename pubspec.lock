@@ -300,6 +300,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+<<<<<<< HEAD
   flutter_mobx:
     dependency: "direct main"
     description:
@@ -307,6 +308,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
+=======
+  flutter_slidable:
+    dependency: "direct main"
+    description:
+      name: flutter_slidable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
+>>>>>>> 531b90daab832c214bcd4e491b2dc2a4d1c4a306
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -618,4 +628,4 @@ packages:
     version: "3.1.0"
 sdks:
   dart: ">=2.16.1 <3.0.0"
-  flutter: ">=1.20.0"
+  flutter: ">=1.22.0"
