@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_it/get_it.dart';
 import 'package:resource_manager/views/home/navigator.dart';
 import 'package:resource_manager/views/login/store/login_store.dart';
+import 'package:resource_manager/views/widgets/messenger.dart';
 
 import '../../core/library/strings.dart' as strings;
 import '../../core/utils/media_query.dart' as ui;
@@ -120,14 +121,18 @@ class LoginView extends StatelessWidget {
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: TextButton(
-                          onPressed: () => _loginStore
-                              .login()
-                              .whenComplete(() => Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const NavigatorView()),
-                                  )),
+                          onPressed: () => _loginStore.login().whenComplete(() {
+                            if (_loginStore.loginStatus == "sucess") {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const NavigatorView()));
+                            } else {
+                              Messenger().errorMessenger(context,
+                                  text: _loginStore.loginStatus);
+                            }
+                          }),
                           child: Text(
                             strings.enterButton,
                             style: TextStyle(
