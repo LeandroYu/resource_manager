@@ -22,9 +22,7 @@ class _MarketListItemState extends State<MarketListItem> {
         decoration: BoxDecoration(
           border: Border.all(width: 0.5, color: Colors.black),
           borderRadius: BorderRadius.circular(4),
-          color: check
-              ? Colors.grey[200]
-              : Colors.white,
+          color: check ? Colors.grey[200] : Colors.white,
         ),
         padding: const EdgeInsets.all(16),
         child: Row(
@@ -34,7 +32,7 @@ class _MarketListItemState extends State<MarketListItem> {
               width: 165,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children:  [
+                children: [
                   Text(
                     ('Nome'),
                     style: TextStyle(
@@ -42,7 +40,7 @@ class _MarketListItemState extends State<MarketListItem> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                   Text(
+                  Text(
                     ('Qtd: 3'),
                     style: TextStyle(
                       color: Colors.black54,
@@ -50,33 +48,26 @@ class _MarketListItemState extends State<MarketListItem> {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-
                 ],
               ),
-              
-
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end ,
-                children:  [
-                  
-                  Text(
-                    ('R\$ 3.00'),
-                    style: TextStyle(
-                      fontSize: ui.getHeigth(context, height: 2),
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                   Text(
-                    ('total: R\$ 9.00'),
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: ui.getHeigth(context, height: 2),
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),]
-            ),
-
+            Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+              Text(
+                ('R\$ 3.00'),
+                style: TextStyle(
+                  fontSize: ui.getHeigth(context, height: 2),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Text(
+                ('total: R\$ 9.00'),
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: ui.getHeigth(context, height: 2),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ]),
             Checkbox(
                 value: check,
                 onChanged: (value) {
@@ -91,14 +82,12 @@ class _MarketListItemState extends State<MarketListItem> {
                   }
                 }),
           ],
-
         ),
       ),
       endActionPane: const ActionPane(
         motion: ScrollMotion(),
         children: [
           SlidableAction(
-            // An action can be bigger than the others.
             flex: 1,
             onPressed: doNothing,
             backgroundColor: Color.fromARGB(255, 228, 9, 9),
