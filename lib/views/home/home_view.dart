@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:resource_manager/views/widgets/main_app_bar.dart';
 import '../../core/library/strings.dart' as strings;
+import '../../core/utils/media_query.dart' as ui;
 import '../../core/utils/ui_padding.dart';
 
 class HomeView extends StatefulWidget {
@@ -15,9 +15,15 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: mainAppBar(context, label: strings.homeViewTitle, hasIcon: true),
-      body: const SafeArea(
-        child: SingleChildScrollView(),
+        appBar: mainAppBar(context,
+            label: strings.homeViewTitle + "Usuario!", hasIcon: true),
+        body: _body(context));
+  }
+
+  Widget _body(BuildContext context) {
+    return SafeArea(
+      child: Column(
+        children: [],
       ),
     );
   }

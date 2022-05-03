@@ -4,8 +4,8 @@ import 'package:resource_manager/views/home/home_view.dart';
 import 'package:resource_manager/views/home/widgets/bottom_navigation_button.dart';
 import 'package:resource_manager/views/market/market_view.dart';
 
-import '../core/library/strings.dart' as strings;
-import '../core/utils/media_query.dart' as ui;
+import '../../core/library/strings.dart' as strings;
+import '../../core/utils/media_query.dart' as ui;
 
 class NavigatorView extends StatefulWidget {
   const NavigatorView({Key? key}) : super(key: key);
