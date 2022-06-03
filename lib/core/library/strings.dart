@@ -14,7 +14,7 @@ const String bottomNavigatorShopping = "Mercado";
 const String bottomNavigatorWallet = "carteira";
 
 // home_view
-const String homeViewTitle = "Bem Vindo ao Resource Manager ";
+const String homeViewTitle = "Bem Vindo";
 
 // login_view
 const String loginViewUsername = "E-mail";

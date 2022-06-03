@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:resource_manager/core/injection/injection.dart';
+import 'package:resource_manager/views/home/navigator.dart';
 import 'package:resource_manager/views/login/login_view.dart';
 
 void main() async {
@@ -18,7 +20,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home: const LoginView(),
+      home: validator(),
     );
+  }
+
+  Widget validator() {
+    if (FirebaseAuth.instance.currentUser != null) {
+      return const NavigatorView();
+    } else {
+      return const LoginView();
+    }
   }
 }

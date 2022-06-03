@@ -41,9 +41,7 @@ class _MarketViewState extends State<MarketView> {
                 children: [
                   Text(
                     'Valor Total: R\$ 0.00',
-                    style: TextStyle(
-                        fontSize: ui.getHeigth(context, height: 2.5),
-                        fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: ui.getHeigth(context, height: 2.5), fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
                     width: 8,

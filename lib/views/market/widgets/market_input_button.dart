@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resource_manager/core/utils/ui_padding.dart';
 import '../../../core/theme/theme.dart' as theme;
 
 class MarketInputButton extends StatefulWidget {
@@ -46,6 +47,6 @@ class _MarketInputButtonState extends State<MarketInputButton> {
           ),
         ),
       ],
-    );
+    ).horizontalPadding(2, context);
   }
 }

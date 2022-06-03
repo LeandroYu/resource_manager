@@ -87,7 +87,7 @@ class _MarketListItemState extends State<MarketListItem> {
           ),
         ],
       ),
-    ).verticalPadding(2, context);
+    ).symetricPadding(2, 2, context);
   }
 }
 

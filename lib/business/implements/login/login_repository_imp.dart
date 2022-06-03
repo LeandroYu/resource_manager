@@ -3,8 +3,7 @@ import 'package:resource_manager/core/repository/login/login_repository.dart';
 
 class LoginRepositoryImp implements LoginRepository {
   @override
-  Future<String> registryUser(
-      {required String emailAddress, required String password}) async {
+  Future<String> registryUser({required String emailAddress, required String password}) async {
     try {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailAddress,
@@ -25,11 +24,9 @@ class LoginRepositoryImp implements LoginRepository {
   }
 
   @override
-  Future<String> login(
-      {required String emailAddress, required String password}) async {
+  Future<String> login({required String emailAddress, required String password}) async {
     try {
-      await FirebaseAuth.instance
-          .signInWithEmailAndPassword(email: emailAddress, password: password);
+      await FirebaseAuth.instance.signInWithEmailAndPassword(email: emailAddress, password: password);
       return "sucess";
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
@@ -37,9 +34,11 @@ class LoginRepositoryImp implements LoginRepository {
       } else if (e.code == 'wrong-password') {
         return "Senha inválida";
       } else {
+        print(e);
         return "Falha ao realizar login! Tente novamente mais tarde";
       }
     } catch (e) {
+      print(e);
       return "Falha ao realizar login! Tente novamente mais tarde";
     }
   }

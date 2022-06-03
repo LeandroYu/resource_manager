@@ -16,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: mainAppBar(
         context,
-        label: "${strings.homeViewTitle} ${FirebaseAuth.instance.currentUser?.displayName ?? ""}",
+        label: "${strings.homeViewTitle} ${FirebaseAuth.instance.currentUser?.displayName ?? ""}!",
         hasIcon: true,
       ),
       body: _body(context),
