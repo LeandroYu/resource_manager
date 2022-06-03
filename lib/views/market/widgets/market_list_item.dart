@@ -32,23 +32,42 @@ class _MarketListItemState extends State<MarketListItem> {
               width: 165,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: const [
+                children: [
                   Text(
-                    ('21/11/2022 - 09:30'),
+                    ('Nome'),
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: ui.getHeigth(context, height: 2.5),
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   Text(
-                    ('Mercadoria'),
+                    ('Qtd: 3'),
                     style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                      color: Colors.black54,
+                      fontSize: ui.getHeigth(context, height: 2),
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
             ),
+            Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+              Text(
+                ('R\$ 3.00'),
+                style: TextStyle(
+                  fontSize: ui.getHeigth(context, height: 2),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Text(
+                ('total: R\$ 9.00'),
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: ui.getHeigth(context, height: 2),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ]),
             Checkbox(
                 value: check,
                 onChanged: (value) {
