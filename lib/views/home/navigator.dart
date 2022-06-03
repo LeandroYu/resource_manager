@@ -6,6 +6,7 @@ import 'package:resource_manager/views/market/market_view.dart';
 
 import '../../core/library/strings.dart' as strings;
 import '../../core/utils/media_query.dart' as ui;
+import '../../core/theme/theme.dart' as theme;
 
 class NavigatorView extends StatefulWidget {
   const NavigatorView({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _NavigatorHomeState extends State<NavigatorView> {
   Widget _bottomNavigationBar(BuildContext context) {
     return NavigationBarTheme(
       data: NavigationBarThemeData(
-        indicatorColor: Colors.white.withOpacity(0.5),
+        indicatorColor: theme.whiteColor.withOpacity(0.5),
       ),
       child: NavigationBar(
         selectedIndex: _currentIndex,
@@ -37,7 +38,7 @@ class _NavigatorHomeState extends State<NavigatorView> {
             _currentIndex = newIndex;
           });
         },
-        backgroundColor: const Color.fromARGB(255, 65, 139, 139),
+        backgroundColor: theme.mainColor,
         animationDuration: const Duration(milliseconds: 500),
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         height: ui.getHeigth(context, height: 10),

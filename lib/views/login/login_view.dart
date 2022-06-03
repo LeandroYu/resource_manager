@@ -6,6 +6,8 @@ import 'package:resource_manager/views/login/store/login_store.dart';
 
 import '../../core/library/strings.dart' as strings;
 import '../../core/utils/media_query.dart' as ui;
+import '../../core/library/assets.dart' as assets;
+import '../../core/theme/theme.dart' as theme;
 import '../../core/utils/ui_padding.dart';
 
 class LoginView extends StatelessWidget {
@@ -14,7 +16,7 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 207, 241, 246),
+      backgroundColor: theme.lightMainColor,
       body: _body(context),
     );
   }
@@ -30,7 +32,7 @@ class LoginView extends StatelessWidget {
             Container(
               height: ui.getHeigth(context, height: 50),
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 65, 139, 139),
+                color: theme.mainColor,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(25),
                   bottomRight: Radius.circular(25),
@@ -43,7 +45,7 @@ class LoginView extends StatelessWidget {
                 height: ui.getHeigth(context, height: 60),
                 width: ui.getWidth(context, width: 80),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: theme.whiteColor,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Form(
@@ -58,7 +60,7 @@ class LoginView extends StatelessWidget {
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             fit: BoxFit.contain,
-                            image: AssetImage("assets/manager_icon.png"),
+                            image: AssetImage(assets.logoIcon),
                           ),
                         ),
                       ),
@@ -69,12 +71,12 @@ class LoginView extends StatelessWidget {
                           label: const Text(
                             strings.loginViewUsername,
                             style: TextStyle(
-                              color: Color.fromARGB(255, 65, 139, 139),
+                              color: theme.mainColor,
                             ),
                           ),
                           icon: const Icon(
                             FontAwesomeIcons.userLarge,
-                            color: Color.fromARGB(255, 65, 139, 139),
+                            color: theme.mainColor,
                           ),
                           enabledBorder: UnderlineInputBorder(
                             borderRadius: BorderRadius.circular(25),
@@ -84,8 +86,7 @@ class LoginView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onChanged: (value) =>
-                            _loginStore.setEmailAddress(value),
+                        onChanged: (value) => _loginStore.setEmailAddress(value),
                       ).horizontalPadding(3, context),
                       TextFormField(
                         obscureText: true,
@@ -95,17 +96,17 @@ class LoginView extends StatelessWidget {
                           label: const Text(
                             strings.loginViewPassword,
                             style: TextStyle(
-                              color: Color.fromARGB(255, 65, 139, 139),
+                              color: theme.mainColor,
                             ),
                           ),
                           icon: const Icon(
                             FontAwesomeIcons.lock,
-                            color: Color.fromARGB(255, 65, 139, 139),
+                            color: theme.mainColor,
                           ),
                           enabledBorder: UnderlineInputBorder(
                             borderRadius: BorderRadius.circular(25),
                             borderSide: BorderSide(
-                              color: Colors.black,
+                              color: theme.blackColor,
                               width: ui.getWidth(context, width: 0.3),
                             ),
                           ),
@@ -116,23 +117,17 @@ class LoginView extends StatelessWidget {
                         height: ui.getHeigth(context, height: 5),
                         width: ui.getWidth(context, width: 60),
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 65, 139, 139),
+                          color: theme.mainColor,
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: TextButton(
-                          onPressed: () => _loginStore
-                              .login()
-                              .whenComplete(() => Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const NavigatorView()),
-                                  )),
+                          onPressed: () => _loginStore.login().whenComplete(() => Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(builder: (context) => const NavigatorView()),
+                              )),
                           child: Text(
                             strings.enterButton,
-                            style: TextStyle(
-                                fontSize: ui.getHeigth(context, height: 2),
-                                color: Colors.white),
+                            style: TextStyle(fontSize: ui.getHeigth(context, height: 2), color: theme.whiteColor),
                           ),
                         ),
                       ).verticalPadding(3, context)
